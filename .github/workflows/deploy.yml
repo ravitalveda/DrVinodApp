@@ -34,7 +34,8 @@ jobs:
 
       - name: Configure GitHub Pages base path
         run: |
-          sed -i 's|<base href="/" />|<base href="/" />|' release/wwwroot/index.html
+          REPOSITORY_NAME="${GITHUB_REPOSITORY#*/}"
+          sed -i "s|<base href=\"/\" />|<base href=\"/${REPOSITORY_NAME}/\" />|" release/wwwroot/index.html
           touch release/wwwroot/.nojekyll
 
       - name: Upload Pages artifact
