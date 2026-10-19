@@ -1,0 +1,421 @@
+/* ==========================================
+   GeroCare Theme
+   Inspired by Norwegian Healthcare Sites
+   ========================================== */
+
+:root {
+    /* Norwegian Healthcare Theme */
+    --primary: #0B5C7A;
+    --primary-dark: #08475D;
+    --accent: #4A8F7A;
+    --background: #F8FAF9;
+    --surface: #FFFFFF;
+    --text: #24323D;
+    --text-light: #5C6B76;
+    --border: #DDE5EA;
+    --success: #4A8F7A;
+}
+
+html,
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 600;
+    color: var(--text);
+}
+
+    h1:focus {
+        outline: none;
+    }
+
+a,
+.btn-link {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+    a:hover {
+        color: var(--primary-dark);
+    }
+
+.content {
+    padding-top: 1.5rem;
+}
+
+/* ==========================================
+   Buttons
+   ========================================== */
+
+.btn-primary {
+    background: #0B5C7A;
+    border-color: #0B5C7A;
+}
+
+    .btn-primary:hover {
+        background: var(--primary-dark);
+    }
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(0, 103, 197, 0.25);
+}
+
+.btn-outline-primary {
+    color: #0B5C7A;
+    border-color: #0B5C7A;
+}
+
+/* ==========================================
+   Cards
+   ========================================== */
+
+.card {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--surface);
+}
+
+    .card:hover {
+        transition: all 0.2s ease;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+.shadow-sm {
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06) !important;
+}
+
+/* ==========================================
+   About Page
+   ========================================== */
+
+.page-header {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border);
+}
+
+.page-title {
+    color: var(--primary);
+}
+
+.doctor-image {
+    border-radius: 16px;
+    border: 5px solid white;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+
+.stat-card {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.stat-text {
+    color: var(--text-light);
+    margin-top: 0.5rem;
+}
+
+/* ==========================================
+   Expertise Section
+   ========================================== */
+
+.expertise-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .expertise-list li {
+        padding: 14px;
+        border-bottom: 1px solid #eef3f8;
+    }
+
+        .expertise-list li:last-child {
+            border-bottom: none;
+        }
+
+        .expertise-list li::before {
+            content: "✓";
+            color: var(--accent);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+/* ==========================================
+   Contact Form
+   ========================================== */
+
+.form-control {
+    border-radius: 10px;
+    border: 1px solid var(--border);
+}
+
+    .form-control:focus {
+        border-color: var(--primary);
+    }
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================
+   Validation
+   ========================================== */
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid var(--success);
+}
+
+.invalid {
+    outline: 1px solid #dc3545;
+}
+
+.validation-message {
+    color: #dc3545;
+}
+
+/* ==========================================
+   Navbar
+   ========================================== */
+
+/*.navbar {
+    background-color: #0B5C7A !important;
+}*/
+
+.navbar {
+    background-color: #0B5C7A !important;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-weight: 600;
+}
+
+.navbar .nav-link {
+    color: rgba(255,255,255,.85) !important;
+    margin-left: 10px;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+    .navbar .nav-link:hover {
+        background-color: rgba(255,255,255,.15);
+        color: white !important;
+    }
+
+    .navbar .nav-link.active {
+        background: white;
+        color: #0B5C7A !important;
+        border-radius: 20px;
+    }
+/* ==========================================
+   Tables
+   ========================================== */
+
+.table {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* ==========================================
+   Footer
+   ========================================== */
+
+.footer {
+    color: var(--text-light);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* ==========================================
+   Loading Indicator
+   ========================================== */
+
+.loading-progress circle:last-child {
+    stroke: var(--primary);
+}
+
+.loading-progress-text {
+    font-weight: 600;
+}
+
+code {
+    color: #c02d76;
+}
+
+/* ==========================================
+   Blazor Error UI
+   ========================================== */
+
+#blazor-error-ui {
+    background: #fff5f5;
+    border-top: 3px solid #dc3545;
+    color: #721c24;
+    bottom: 0;
+    display: none;
+    left: 0;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+
+
+.hero-section {
+    background-color: #F8FAF9;
+    padding: 80px 0;
+}
+
+.hero-image {
+    max-height: 500px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.stat-card {
+    border: none;
+    border-radius: 16px;
+}
+
+.stat-number {
+    color: #0B5C7A;
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.stat-text {
+    color: #666;
+}
+
+
+.card {
+    border: 1px solid #DDE5EA;
+    border-radius: 16px;
+    box-shadow: none;
+}
+
+    .card:hover {
+        box-shadow: 0 6px 18px rgba(0,0,0,.06);
+    }
+
+.display-4 {
+    color: #1a365d;
+}
+
+
+.app-shell {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.navbar-brand {
+    color: #0B5C7A !important;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+    .nav-link.active {
+        color: #0B5C7A !important;
+        font-weight: 600;
+    }
+
+.footer {
+    background: white;
+    border-top: 1px solid #e7edf4;
+    padding: 1.5rem;
+    text-align: center;
+    color: #666;
+}
+
+
+.navbar-brand {
+    text-decoration: none;
+    line-height: 1.2;
+}
+
+.brand-title {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.brand-subtitle {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+.navbar-brand:hover {
+    opacity: 0.95;
+}
+
+.service-card {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+    .service-card:hover {
+        transform: translateY(-5px);
+    }
+
+.service-price {
+    color: #005aa3;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.payment-card {
+    border-radius: 16px;
+}
+
+.payment-methods {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.payment-badge {
+    padding: 10px 18px;
+    border-radius: 24px;
+    background: #eef5fb;
+    border: 1px solid #d9e3ec;
+    font-weight: 600;
+    color: #005aa3;
+}
