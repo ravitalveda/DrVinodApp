@@ -7,6 +7,7 @@
     --primary: #025B75;
     --primary-dark: #025169;
     --brand-light: #E6F2F6;
+    --header-background: #D6E9EF;
     --brand-accent: #E5BDF5;
     --bs-primary: #025B75;
     --bs-primary-rgb: 2, 91, 117;
@@ -213,7 +214,7 @@ textarea {
    ========================================== */
 
 .navbar {
-    background-color: var(--brand-light) !important;
+    background-color: var(--header-background) !important;
 }
 
 .navbar-brand {
