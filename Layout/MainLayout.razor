@@ -17,42 +17,44 @@
 
                 <button class="navbar-toggler"
                         type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarNav">
+                        aria-controls="navbarNav"
+                        aria-expanded="@isNavbarOpen"
+                        aria-label="Toggle navigation"
+                        @onclick="ToggleNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse"
+                <div class="collapse navbar-collapse @(isNavbarOpen ? "show" : null)"
                      id="navbarNav">
 
                     <ul class="navbar-nav ms-auto">
 
                         <li class="nav-item">
-                            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                            <NavLink class="nav-link" href="" Match="NavLinkMatch.All" @onclick="CloseNavbar">
                                 Home
                             </NavLink>
                         </li>
 
                         <li class="nav-item">
-                            <NavLink class="nav-link" href="about">
+                            <NavLink class="nav-link" href="about" @onclick="CloseNavbar">
                                 About Dr. Vinod
                             </NavLink>
                         </li>
 
                         <li class="nav-item">
-                            <NavLink class="nav-link" href="services">
+                            <NavLink class="nav-link" href="services" @onclick="CloseNavbar">
                                 Services
                             </NavLink>
                         </li>
 
                         <li class="nav-item">
-                            <NavLink class="nav-link" href="resources">
+                            <NavLink class="nav-link" href="resources" @onclick="CloseNavbar">
                                 Senior Resources
                             </NavLink>
                         </li>
 
                         <li class="nav-item">
-                            <NavLink class="nav-link" href="contact">
+                            <NavLink class="nav-link" href="contact" @onclick="CloseNavbar">
                                 Contact
                             </NavLink>
                         </li>
@@ -89,3 +91,11 @@
     </footer>
 
 </div>
+
+@code {
+    private bool isNavbarOpen;
+
+    private void ToggleNavbar() => isNavbarOpen = !isNavbarOpen;
+
+    private void CloseNavbar() => isNavbarOpen = false;
+}

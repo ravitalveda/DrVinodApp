@@ -258,16 +258,26 @@ textarea {
     padding: 2rem 0;
 }
 
-/* ==========================================
-   Loading Indicator
-   ========================================== */
-
-.loading-progress circle:last-child {
-    stroke: var(--primary);
+.loading-screen {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--brand-light);
 }
 
-.loading-progress-text {
-    font-weight: 600;
+.loading-spinner {
+    width: 2.5rem;
+    aspect-ratio: 1;
+    border: 0.25rem solid rgba(2, 81, 105, 0.2);
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: loading-spin 0.75s linear infinite;
+}
+
+@keyframes loading-spin {
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 code {
